@@ -407,11 +407,9 @@ cc_library(
         "//tensorflow:internal",
     ],
     deps = [
-        "//tensorflow/c:tensor_interface",
-        "//tensorflow/core:framework",
         "//tensorflow/core:lib",
         "//tensorflow/core:protos_all_cc",
-        "@com_google_absl//absl/types:span",
+        "@com_google_absl//absl/container:inlined_vector",
     ],
 )
 
@@ -471,6 +469,7 @@ cc_library(
     ],
     deps = [
         "//tensorflow/core:protos_all_cc",
+        "//tensorflow/core/platform:intrusive_ptr",
         "//tensorflow/core/platform:refcount",
         "//tensorflow/core/platform:status",
     ],
